@@ -1,0 +1,19 @@
+{
+  "name": "authentication-server",
+  "version": "1.0.0",
+  "description": "a server for mern stack authentication",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phenom21/Authentication.git"
+  },
+  "author": "Vinayak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/phenom21/Authentication/issues"
+  },
+  "homepage": "https://github.com/phenom21/Authentication#readme"
+}
