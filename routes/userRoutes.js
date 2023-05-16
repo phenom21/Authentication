@@ -137,4 +137,21 @@ router.get("/logout", (req, res) => {
   }
 });
 
+router.get("/loggedin",(req,res)=>{
+  try {
+    const token = req.cookies.token;
+    if (!token) {
+      return res.json(false);
+    }
+    jwt.verify(
+      req.cookies.token,
+      process.env.JWT_PASSWORD
+    );
+    res.send(true);
+  } catch (err) {
+    res.json(false);
+  }
+}
+)
+
 module.exports = router;

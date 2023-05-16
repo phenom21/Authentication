@@ -4,12 +4,17 @@ const dotenv = require("dotenv");
 const router = require("./routes/userRoutes.js");
 const custRouter = require("./routes/customerRoutes.js");
 const cookieparser = require('cookie-parser');
+const cors = require("cors");
 dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(express.json());
 app.use(cookieparser());
+app.use(cors({
+  origin: "http://localhost:3000",
+  credentials: true
+}))
 app.use("/auth", router);
 app.use("/customer",custRouter);
 //Connecting to server
